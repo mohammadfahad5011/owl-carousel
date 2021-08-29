@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  scroll-padding-top: 9rem;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+/*=========================
+    -------hero-section-------
+===========================*/
+.hero-single-slide {
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  width: 100%;
+  height: 100vh;
+  position: relative;
+}
+
+.hero-single-slide .text-container {
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -25%);
+}
+
+.hero-single-slide .text-container p {
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: #f0f8ff;
+  margin-bottom: 3rem;
+}
+
+.hero-single-slide .text-container p span {
+  color: rgb(230, 226, 34);
+}
+
+.hero-single-slide .text-container h2 {
+  font-size: 4rem;
+  font-weight: 800;
+  word-spacing: 0.2rem;
+  color: #f0f8ff;
+}
+.hero-single-slide .text-container h2 span {
+  display: block;
+}
+
+/*=========================
+-------owl carousel-------
+===========================*/
+.owl-theme .owl-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 2rem;
+  right: 2rem;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-between;
+}
+
+.owl-theme .owl-nav span {
+  font-size: 5rem;
+  color: #fff;
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  /* background: #000; */
+  border: 1px solid #fff;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5rem;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:focus {
+  outline: none;
+}
+.owl-theme .owl-nav [class*="owl-"]:hover {
+  background: transparent;
+}
+
+.owl-theme .owl-nav [class*="owl-"]:hover span {
+  color: rgb(167, 167, 167);
+}
+
+/* dots gulo ke image ar upore niye asar jonno */
+.owl-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 1rem;
+}
+
+/* dots gulo ke design korar jonno */
+.owl-theme .owl-dots .owl-dot span {
+  height: 2rem;
+  width: 2rem;
+  background: #fff;
+  border-radius: 50%;
+}
+
+/* active and hover gesign korar joono */
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  background: rgb(230, 226, 34);
+}
+
+/*=========================
+    -------media-queries-------
+    ===========================*/
+
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero-single-slide .text-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+  .hero-single-slide .text-container p {
+    font-size: 1.5rem;
+  }
+  .hero-single-slide .text-container h2 {
+    font-size: 2.5rem;
+  }
+}
